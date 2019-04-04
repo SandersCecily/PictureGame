@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "image": "./assets/images/apricotrose.jpeg"
+    },
+    {
+      "id": 2,
+      "image": "./assets/images/bloomingblue.jpg"
+    },
+    {
+      "id": 3,
+      "image": "./assets/images/bluebouquet.jpg"
+    },
+    {
+      "id": 4,
+      "image": "./assets/images/closeupsakura.jpg"
+    },
+    {
+      "id": 5,
+      "image": "./assets/images/hotpinkblossoms.jpg"
+    },
+    {
+      "id": 6,
+      "image": "./assets/images/orange-redtreeflower.jpg"
+    },
+    {
+      "id": 7,
+      "image": "./assets/images/orangetreeflower.jpg"
+    },
+    {
+      "id": 8,
+      "image": "./assets/images/skysakura.jpg"
+    },
+    {
+      "id": 9,
+      "image": "./assets/images/tricoloredblossom.jpeg"
+    },
+    {
+      "id": 10,
+      "image": "./assets/images/whitedaisy.jpg"
+    },
+    {
+      "id": 11,
+      "image": "./assets/images/whitesakura.jpg"
+    },
+    {
+      "id": 12,
+      "image": "./assets/images/whitetreeflower.jpg"
+    }
+  ]
