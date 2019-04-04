@@ -1,12 +1,14 @@
-
+.container{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    left: 8%;
+}
 .card {
     height: 180px;
     width: 180px;
     float: left;
-    margin: 35px;
-    left: 10%;
-    margin: 50px;
-    margin-top: 35px;
+    margin: 20px;
 }
 
 .card-img {

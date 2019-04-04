@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import Jumbotron from "./components/Jumbotron";
 import Container from "./components/Container";
 import "./App.css";
@@ -15,36 +14,36 @@ class App extends Component {
   }
 
   
-  clickHandler = id => {
-    if (this.state.clicked.indexOf(id) === -1) {
-      var currentscore = this.state.score + 1
-      this.setState({ score: currentscore });
+  gameHandler = (id) => {
+    let clicked = this.state.clicked;
+    if (clicked.includes(id)) {
       this.setState({
-        clicked: this.state.clicked.concat(id),
-      });
-      if (currentscore >= this.state.highscore) {
-        this.setState({ highscore: currentscore });
-      } else if (currentscore === 12) {
-        alert("You won!");
-      }
-      this.handleShuffle();
+        clicked: [], score: 0
+      })
+      return
     } else {
-      this.setState({
-        currentScore: 0,
-        highscore: this.state.highscore,
-        clicked: []
-      });
+      clicked.push(id);
     }
-  };
 
-  ///edit!!!
-  handleShuffle = () => {
+    if (clicked.length === this.state.flowers.length) {
       this.setState({
-        flowers: this.state.flowers.sort(() => 0.5 - Math.random())
-      });
-    };
+        score: 0, clicked: []
+      })
+      return
+    }
 
-  //end edit!!
+    this.setState({ flowers, clicked, score: clicked.length, status: " " });
+    var index = 0, rand = 0, temp = null
+
+    //fisher-yates shuffle
+    for (index = flowers.length - 1; index > 0; index -= 1) {
+      rand = Math.floor(Math.random() * (index + 1))
+      temp = flowers[index]
+      flowers[index] = flowers[rand]
+      flowers[rand] = temp
+    }
+
+  }
 
   render() {
     return (
@@ -56,10 +55,9 @@ class App extends Component {
             key={flower.id}
             id={flower.id}
             image={flower.image}
-            handleClick={this.clickHandler}
+            gameHandler={this.gameHandler}
           />
         ))}
-        <Footer />
       </React.Fragment>
     );
   }

@@ -2,4 +2,7 @@
     height: 70px;
     color: aliceblue;
     font-weight: bolder;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
