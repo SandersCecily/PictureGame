@@ -1,7 +1,7 @@
 # PictureGame
 
 ## Introduction
-
+This application
 ## Technologies
 
 ## Challenges
